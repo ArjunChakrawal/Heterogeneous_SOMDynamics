@@ -23,8 +23,7 @@ IMPORTANT: For reproducebility of results, provided *ksmmh1.mat*, *kmh1.mat* and
 ### Step2: SOM dynamics in heterogeneous domain
 Run *Scenario1_SteadyStateIC\main_Mult.m* file to simulate SOM dynamics in a hetergeneous soil. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
 ### Step3: Post-processing
-Some scripts are provide for post-processing of results in the 
-Results are stored in the *Scenario1_SteadyStateIC\results\* folder. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
+Some scripts are provide for the post-processing of results in the *Scenario1_SteadyStateIC\results\* folder. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
 
 <br/>
 There are some third party scripts used in delevoping this model and already included in this repository.
