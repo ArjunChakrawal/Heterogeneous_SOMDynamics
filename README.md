@@ -1,9 +1,8 @@
 # Heterogeneous_SOMDynamics
 
 
-This repository contain matlab script to run soil organic matter (SOM) dynamics in a hetergeneous soil system.
-main files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders for simulating SOM dynamic using Michaelis-Menten
-and Multiplicative kinetics.
+This repository contains matlab scripts to simulate soil organic matter (SOM) dynamics in a hetergeneous soil system.
+**main_XXX.m** files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders for solving mass balance equations using Michaelis-Menten and Multiplicative kinetics.
 
 Folder structure is following
 
@@ -16,7 +15,8 @@ Folder structure is following
         - Spatial_field
     - Third_party_scripts
 
-Code must be run in the following order. Here we use the example of Scenario1_SteadyStateIC.
+
+NOTE: Code must be run in the following order. Here we show the example of Scenario1_SteadyStateIC.
 ### Step1: Spatial field generation
 Run *Scenario1_SteadyStateIC\Spatial_field\SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
 IMPORTANT: For reproducebility of results, provided *ksmmh1.mat*, *kmh1.mat* and *ksm1.mat* files should be used.
