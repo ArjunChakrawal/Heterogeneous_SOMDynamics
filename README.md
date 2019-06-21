@@ -14,6 +14,7 @@ Folder structure is following
     - Scenario2_transientIC
         - results
         - Spatial_field
+    - Third_party_scripts
 
 Code must be run in the following order. Here we use the example of Scenario1_SteadyStateIC.
 ### Step1: Spatial field generation
