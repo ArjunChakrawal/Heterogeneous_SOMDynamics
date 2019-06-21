@@ -1,5 +1,5 @@
 # Heterogeneous_SOMDynamics
-=======
+-----------
 
 This repository contain matlab script to run soil organic matter (SOM) dynamics in a hetergeneous soil system.
 main files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders for simulating SOM dynamic using Michaelis-Menten
