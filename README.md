@@ -25,7 +25,7 @@ Run /Scenario1_SteadyStateIC/main_Mult.m file to simulate SOM dynamics in a hete
 Some scripts are provide for post-processing of results in the 
 Results are stored in the \results folder. 
 
-
+<br/>
 There are some third party scripts used in delevoping this model and already included in this repository.
 
 * [parfor_progressbar](https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar)
