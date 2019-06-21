@@ -5,6 +5,7 @@ clearvars;
 
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario1_SteadyStateIC\results\'])
 
 ksmm=0.018;
@@ -241,3 +242,4 @@ export_fig(gcf,'Mult_SOT_supplimentary.pdf','-r300');
 %%
 rmpath(selpath)
 rmpath([selpath,'\Scenario1_SteadyStateIC\results\'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))

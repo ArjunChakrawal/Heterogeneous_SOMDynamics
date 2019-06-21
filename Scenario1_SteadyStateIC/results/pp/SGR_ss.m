@@ -2,8 +2,6 @@ clc
 close all
 clearvars;
 
-LC=linspecer(3); % for disctinctive line color 
-
 ksmm=0.018;
 kb=0.00028;  %h-1
 Y=0.31;
@@ -17,7 +15,9 @@ Vmic_cc=Vol_mic*1e-12; %cm3
 Vdomain_cc=Vol_mic*nx*ny*1e-12 ; % cm^3
 
 selpath = uigetdir;
+addpath(selpath)
 addpath([selpath,'\Scenario1_SteadyStateIC\results\'])
+LC=linspecer(3); % for disctinctive line color 
 
 %% homo
 load('Ph_mult_neg_ss_1.mat')

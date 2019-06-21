@@ -4,12 +4,13 @@ clear all
 close all
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field'])
 addpath([selpath,'\Scenario2_transientIC\Spatial_field'])
 
 phi= (1+sqrt(5))/2;
 height = 3.5;     %   in inches
-width = 7;
+width = 7;  
 alw = 0.5;    % AxesLineWidth
 fsz = 11;      % FontSize
 fszax=fsz-1;
@@ -80,3 +81,4 @@ export_fig(gcf,'Ks_hist2.pdf','-r300');
 rmpath(selpath)
 rmpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field'])
 rmpath([selpath,'\Scenario2_transientIC\Spatial_field'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))

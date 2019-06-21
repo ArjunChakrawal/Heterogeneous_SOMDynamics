@@ -7,6 +7,7 @@ Vol_mic = 50*50*50; %um^3
 Vmic_cc=Vol_mic*1e-12; %cm3
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario1_SteadyStateIC\results\'])
 
 load('Ph_mult_pos_ss_1.mat')
@@ -115,3 +116,4 @@ export_fig(gcf,'maps_ss.pdf','-r300');
 %%
 rmpath(selpath)
 rmpath([selpath,'\Scenario1_SteadyStateIC\results\'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))
