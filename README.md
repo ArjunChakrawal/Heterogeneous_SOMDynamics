@@ -27,6 +27,6 @@ Results are stored in the \results folder.
 
 There are some third party scripts used in delevoping this model and already included in this repository.
 
-* parfor_progressbar https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar
+* [parfor_progressbar] https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar()
 * spatialPattern https://se.mathworks.com/matlabcentral/fileexchange/5091-generate-spatial-data
 * linspecer https://se.mathworks.com/matlabcentral/fileexchange/42673-beautiful-and-distinguishable-line-colors-colormap
