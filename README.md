@@ -31,3 +31,6 @@ There are some third party scripts used in delevoping this model and already inc
 * [parfor_progressbar](https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar)
 * [spatialPattern](https://se.mathworks.com/matlabcentral/fileexchange/5091-generate-spatial-data)
 * [linspecer]( https://se.mathworks.com/matlabcentral/fileexchange/42673-beautiful-and-distinguishable-line-colors-colormap)
+* [export_fig](https://se.mathworks.com/matlabcentral/fileexchange/23629-export_fig)
+* [tight_subplot](https://se.mathworks.com/matlabcentral/fileexchange/27991-tight_subplot-nh-nw-gap-marg_h-marg_w)
+* [ds2nfu](https://se.mathworks.com/matlabcentral/fileexchange/10656-data-space-to-figure-units-conversion)
