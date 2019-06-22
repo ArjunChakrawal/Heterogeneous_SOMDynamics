@@ -24,11 +24,11 @@ Run *Scenario1_SteadyStateIC\main_Mult.m* to simulate SOM dynamics in the hetero
 Some scripts are provide for the post-processing of results in the *Scenario1_SteadyStateIC\results* folder. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 
 <br/>
-There are some third party scripts used in delevoping this model and already included in this repository. These scripts are redistributable under their respective licenses which can be found in the following links.
+There are some third party scripts (from MATLAB Central File Exchange) used in delevoping this model and already included in this repository. These scripts are redistributable under their respective licenses which can be found in the following links.
 
-* [parfor_progressbar](https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar)
-* [spatialPattern](https://se.mathworks.com/matlabcentral/fileexchange/5091-generate-spatial-data)
-* [linspecer]( https://se.mathworks.com/matlabcentral/fileexchange/42673-beautiful-and-distinguishable-line-colors-colormap)
-* [export_fig](https://se.mathworks.com/matlabcentral/fileexchange/23629-export_fig)
-* [tight_subplot](https://se.mathworks.com/matlabcentral/fileexchange/27991-tight_subplot-nh-nw-gap-marg_h-marg_w)
-* [ds2nfu](https://se.mathworks.com/matlabcentral/fileexchange/10656-data-space-to-figure-units-conversion)
+* [parfor_progressbar](https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar), by Daniel Terry 2016. 
+  [spatialPattern](https://se.mathworks.com/matlabcentral/fileexchange/5091-generate-spatial-data), by Jon Yearsley 2016.
+* [linspecer]( https://se.mathworks.com/matlabcentral/fileexchange/42673-beautiful-and-distinguishable-line-colors-colormap), by  Jonathan C. Lansey 2015.
+* [export_fig](https://se.mathworks.com/matlabcentral/fileexchange/23629-export_fig), by Yair Altman 2018
+* [tight_subplot](https://se.mathworks.com/matlabcentral/fileexchange/27991-tight_subplot-nh-nw-gap-marg_h-marg_w), by  Pekka Kumpulainen 2016.
+* [ds2nfu](https://se.mathworks.com/matlabcentral/fileexchange/10656-data-space-to-figure-units-conversion), by Michelle Hirsch 2015.
