@@ -15,7 +15,7 @@ The folder structure is as follows:
 
 
 To run the code, download the zip file of the repository and unzip it to your favourite location, and afterwards follow the instructions below. Here we show the example of Scenario1_SteadyStateIC.
-<br\>
+<br/>
 ### Step1: Spatial field generation
 Run *Scenario1_SteadyStateIC\Spatial_field\SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
 IMPORTANT: For reproducebility of results, provided *ksmmh1.mat*, *kmh1.mat* and *ksm1.mat* files should be used.
