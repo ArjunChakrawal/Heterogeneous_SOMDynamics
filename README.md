@@ -1,6 +1,6 @@
 # Heterogeneous_SOMDynamics
 
-This repository contains matlab Matlab scripts to simulate soil organic matter (SOM) dynamics in a heterogeneous soil system. **main_XXX.m** files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders and solve the mass balance equations of SOM compartments. In the folder Scenario1_SteadyStateIC, a soil system initially on average in steady state conditions is considered; in the folder Scenario2_transientIC, the responses to initial conditions perturbed with respect to the steady state are studied. In both scenarios, Michaelis-Menten and Multiplicative kinetics for decomposition are compared.
+This repository contains Matlab 2018b scripts to simulate soil organic matter (SOM) dynamics in a heterogeneous soil system. **main_XXX.m** files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders and solve the mass balance equations of SOM compartments. In the folder Scenario1_SteadyStateIC, a soil system initially on average in steady state conditions is considered; in the folder Scenario2_transientIC, the responses to initial conditions perturbed with respect to the steady state are studied. In both scenarios, Michaelis-Menten and Multiplicative kinetics for decomposition are compared.
 
 The folder structure is as follows:
 
@@ -24,7 +24,7 @@ Run *Scenario1_SteadyStateIC\main_Mult.m* to simulate SOM dynamics in the hetero
 Some scripts are provide for the post-processing of results in the *Scenario1_SteadyStateIC\results* folder. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 
 <br/>
-There are some third party scripts used in delevoping this model and already included in this repository.
+There are some third party scripts used in delevoping this model and already included in this repository. All these scripts are redistributabel but under thier respective licenses provide in the links.
 
 * [parfor_progressbar](https://www.mathworks.com/matlabcentral/fileexchange/53773-parfor_progressbar)
 * [spatialPattern](https://se.mathworks.com/matlabcentral/fileexchange/5091-generate-spatial-data)
