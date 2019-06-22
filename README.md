@@ -17,12 +17,11 @@ The folder structure is as follows:
 To run the code, download the zip file of the repository and unzip it to your favourite location, and afterwards follow the instructions below. Here we show the example of Scenario1_SteadyStateIC.
 <br/>
 ### Step1: Spatial field generation
-Run *Scenario1_SteadyStateIC\Spatial_field\SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
-IMPORTANT: For reproducebility of results, provided *ksmmh1.mat*, *kmh1.mat* and *ksm1.mat* files should be used.
+Run *Scenario1_SteadyStateIC\Spatial_field\SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder. IMPORTANT: For reproducibility of results, the provided ksmmh1.mat, kmh1.mat and ksm1.mat files, which contain spatially heterogeneous maps for kinetics parameters, should be used.
 ### Step2: SOM dynamics in heterogeneous domain
-Run *Scenario1_SteadyStateIC\main_Mult.m* file to simulate SOM dynamics in a hetergeneous soil. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
+Run *Scenario1_SteadyStateIC\main_Mult.m* to simulate SOM dynamics in the heterogeneous domain created in Step 1. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 ### Step3: Post-processing
-Some scripts are provide for the post-processing of results in the *Scenario1_SteadyStateIC\results\* folder. While running this code, it opens a UI to select the **Heterogeneous_SOMDynamics** folder.
+Some scripts are provide for the post-processing of results in the *Scenario1_SteadyStateIC\results* folder. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 
 <br/>
 There are some third party scripts used in delevoping this model and already included in this repository.
