@@ -1,6 +1,6 @@
 # Heterogeneous_SOMDynamics
 
-This repository contains Matlab 2018b scripts to simulate soil organic matter (SOM) dynamics in a heterogeneous soil system. **main_XXX.m** files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders and solve the mass balance equations of SOM compartments. In the folder Scenario1_SteadyStateIC, a soil system initially on average in steady state conditions is considered; in the folder Scenario2_transientIC, the responses to initial conditions perturbed with respect to the steady state are studied. In both scenarios, Michaelis-Menten and Multiplicative kinetics for decomposition are compared.
+This repository contains Matlab R2018b scripts to simulate soil organic matter (SOM) dynamics in a heterogeneous soil system. **main_XXX.m** files are in Scenario1_SteadyStateIC and Scenario2_transientIC folders and solve the mass balance equations of SOM compartments. In the folder Scenario1_SteadyStateIC, a soil system initially on average in steady state conditions is considered; in the folder Scenario2_transientIC, the responses to initial conditions perturbed with respect to far from the steady state are studied. In both scenarios, Michaelis-Menten and Multiplicative kinetics for decomposition are compared.
 
 The folder structure is as follows:
 
