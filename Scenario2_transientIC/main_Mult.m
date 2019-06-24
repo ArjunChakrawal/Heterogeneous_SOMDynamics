@@ -7,6 +7,7 @@
 clc;close all;clearvars;
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario2_transientIC\Spatial_field'])
 
 %% define model parameters
@@ -58,7 +59,7 @@ cs=spCs;
 cb=spCb;
 ks=ones(nx,ny).*ks;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
 
 %negative correlation
 sav_fname=strcat('results\Ph_mult_neg');
@@ -68,7 +69,7 @@ cs=spCs;
 cb=spCb;
 ks=ones(nx,ny).*ks;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
 
 %zero correlation
 sav_fname=strcat('results\Ph_mult_noCorr');
@@ -78,7 +79,7 @@ cs=spCs;
 cb=spCb;
 ks=ones(nx,ny).*ks;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
 
 %% Biophysical and biochemical heterogeneity only i.e. only substrate, 
 %  microbial C and kinetic parameters are spatially heterogeneous 
@@ -92,7 +93,7 @@ cs=spCs;
 cb=spCb;
 ks=ksm1;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
 
 %negative correlation
 sav_fname=strcat('results\Phch_mult_neg');
@@ -103,7 +104,7 @@ cs=spCs;
 cb=spCb;
 ks=ksm1;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic, ks, kb, Y, nx, ny, options)
 
 %zero correlation
 sav_fname=strcat('results\Phch_mult_noCorr');
@@ -114,12 +115,11 @@ cs=spCs;
 cb=spCb;
 ks=ksm1;
 kb=ones(nx,ny).*kb;
-DEC_Mult(cs,cb,sav_fname,T,t,Imic,ks, kb, Y, nx, ny, options)
+hetero_Mult(cs,cb,sav_fname,T,t,Imic,ks, kb, Y, nx, ny, options)
 
 %%
 
 rmpath(selpath)
 rmpath([selpath,'\Scenario2_transientIC\Spatial_field'])
-
-
+rmpath(genpath([selpath,'\Third_party_scripts\']))
 

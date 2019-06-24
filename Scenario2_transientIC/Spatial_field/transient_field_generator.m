@@ -12,6 +12,7 @@ close all
 clearvars;
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario2_transientIC\Spatial_field'])
 
 ksmm=0.018;
@@ -141,4 +142,5 @@ mean(y1)
 %%
 rmpath(selpath)
 rmpath([selpath,'\Scenario2_transientIC\Spatial_field'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))
 

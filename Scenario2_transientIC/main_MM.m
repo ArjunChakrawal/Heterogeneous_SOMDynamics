@@ -8,6 +8,7 @@ clc;close all;clearvars;
 
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario2_transientIC\Spatial_field'])
 
 %% define model parameters
@@ -132,5 +133,6 @@ hetero_MM(cs,cb,sav_fname,T,t,Imic, ksmm, kb,km, Y, nx, ny, options);
 %%
 rmpath(selpath)
 rmpath([selpath,'\Scenario2_transientIC\Spatial_field'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))
 
 
