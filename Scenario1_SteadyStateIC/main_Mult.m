@@ -4,6 +4,7 @@ clc;close all;clearvars;
 %Add path
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field'])
 %% define model parameters
 ksmm=0.018;     % h-1
@@ -114,7 +115,8 @@ ks=ksm2;
 kb=ones(nx,ny).*kb;
 hetero_Mult(cs,cb,sav_fname,T,t,Imic,ks, kb, Y, nx, ny, options)
 
-
+%%
 rmpath(selpath)
 rmpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))
 
