@@ -11,6 +11,7 @@ close all
 clearvars;
 selpath = uigetdir;
 addpath(selpath)
+addpath(genpath([selpath,'\Third_party_scripts\']))
 addpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field\'])
 
 ksmm=0.018;
@@ -154,3 +155,4 @@ set(gca, 'FontSize',14);
 %%
 rmpath(selpath)
 rmpath([selpath,'\Scenario1_SteadyStateIC\Spatial_field\'])
+rmpath(genpath([selpath,'\Third_party_scripts\']))
