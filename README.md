@@ -19,9 +19,9 @@ The folder structure is as follows:
 To run the code, download the zip file of the repository and unzip it to your favourite location, and afterwards follow the instructions below. Here we show the example of Scenario1_SteadyStateIC.
 <br/>
 ### Step1: Spatial field generation
-Run *Scenario1_SteadyStateIC\Spatial_field\SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder. IMPORTANT: For reproducibility of results, the provided ksmmh1.mat, kmh1.mat and ksm1.mat files, which contain spatially heterogeneous maps for kinetics parameters, should be used. By default save commands to save the heterogeneous fields files are commented. To create new heterogeneous fields uncomment the save commands in SS_field_generator.m file.
+Run *Scenario1_SteadyStateIC/Spatial_field/SS_field_generator.m* to generate heterogeneous fields of substrate and microbial C. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder. IMPORTANT: For reproducibility of results, the provided ksmmh1.mat, kmh1.mat and ksm1.mat files, which contain spatially heterogeneous maps for kinetics parameters, should be used. By default save commands to save the heterogeneous fields files are commented. To create new heterogeneous fields uncomment the save commands in SS_field_generator.m file.
 ### Step2: SOM dynamics in heterogeneous domain
-Run *Scenario1_SteadyStateIC\main_Mult.m* to simulate SOM dynamics in the heterogeneous domain created in Step 1. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
+Run *Scenario1_SteadyStateIC/main_Mult.m* to simulate SOM dynamics in the heterogeneous domain created in Step 1. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 ### Step3: Post-processing
 To plot the results scripts are provided coresspondig folders named as **Fig_X.m**. While running this code, a user interface opens to select the **Heterogeneous_SOMDynamics** folder.
 
