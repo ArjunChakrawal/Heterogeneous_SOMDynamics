@@ -52,8 +52,8 @@ sp2=spatialPattern([100,100],-3);
 sp3= -0.5.*spCb +  0.75*max(spCb(:)) + sp2.*max(spCb(:))*0.1;
 spCs=sp3./sum(sp3(:)).*total_allowedCs ;
 
-save('field_Csn.mat', 'spCs')
-save('field_Cb.mat', 'spCb')
+%save('field_Csn.mat', 'spCs')
+%save('field_Cb.mat', 'spCb')
 
 subplot(3,3,1)
 surf(spCs);  shading flat; view(0,90); colorbar; 
@@ -77,7 +77,7 @@ sp3= 200.*spCb  + max(spCb(:))*100 +(sp2).*100e6; % high Cs
 sp3=sp3./sum(sp3(:)); 
 spCs=sp3.*total_allowedCs ;
 
-save('field_Csp.mat', 'spCs')
+%save('field_Csp.mat', 'spCs')
 
 subplot(3,3,4)
 surf(spCs);  shading flat; view(0,90); colorbar; 
@@ -102,7 +102,7 @@ id2 =find(sp3<=0);
 sp3(id2)=0;
 spCs=sp3./sum(sp3(:)).*total_allowedCs ;
 
-save('field_Cs_noCorr.mat', 'spCs')
+%save('field_Cs_noCorr.mat', 'spCs')
 
 subplot(3,3,7)
 surf(spCs);  shading flat; view(0,90); colorbar; 

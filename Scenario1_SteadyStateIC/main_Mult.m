@@ -43,7 +43,7 @@ dec0=ks.*C1(:,1).*C1(:,2);
 C1=C1.*1e-12./(rho*Vmic_cc); %Time evolution of carbon mg C/gSoil
 
 figure;
-plot(t1./24./365,C1(:,1)); hold on; plot(t1./24./365,C1(:,2));
+plot(t1./24./365,C1(:,1)); hold on; plot(t1./24./365,C1(:,2));plot(t1./24./365,C1(:,3));
 xlabel('Time(year)'); ylabel('(mg C/gSoil) ');
 legend('Substrate','Biomass');title('Homogeneous case')
 
