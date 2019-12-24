@@ -41,19 +41,31 @@ ks0=ks_mult_estimation(T,cs0,cb0,co20,kb,ksmm, km, Imic,Y,rho,Vol_mic);
 Imic=(total_Cs/(nx*ny))/200000;
 
 %% Steady state substrate and microbial C 
+%% Generating spatially correlated Cs adn Cb with positive correlation
+
 ks=ks0;
 css=kb/(Y*ks);      %Steady state substrate
 cbs=Y*Imic/(kb*(1-Y));      %Steady state microbial C
 total_allowedCs= css*(nx*ny);   % total amount of SOM in domain
 total_allowedCb= cbs*(nx*ny);   % total amount of microbial C  in domain
-load('ph_cb.mat');
+
+r2=spatialPattern([200,200],-3);
+sp1=r2(1:100,1:100);
+mu=cbs*5;
+sigma=20*cbs;
+spCb = sp1.*sigma + ones(nx,ny).*mu;
+id2 =find(spCb<=0);
+spCb(id2)=(mu/10).*rand(length(id2),1);
+spCb=(spCb./sum(spCb(:))).*total_allowedCb;
+id1 =find(spCb>=0.01*max_allowedC_ms);
 
 sp2=spatialPattern([100,100],-3);
-sp3= 200.*spCb  + max(spCb(:))*100 +(sp2).*5e7; % high Cs
+sp3= 200.*spCb  + max(spCb(:))*100 +(sp2).*1e7; % high Cs
 sp3=sp3./sum(sp3(:)); 
 spCs=sp3./sum(sp3(:)).*total_allowedCs ;
 
-% save('ph_pos_cs_ks1.mat', 'spCs')
+% save('ph_cb.mat', 'spCb');
+% save('ph_pos_cs.mat', 'spCs')
 
 
 figure
@@ -71,17 +83,16 @@ txt=text(max(spCb(:))/2,max(spCs(:))*0.9, sprintf('Corr(Cs,Cb)= %0.3f',corr2(spC
 txt.FontSize=12;txt.FontWeight='bold';
 set(gca,'FontSize',10);
 colormap jet
-%% Generating spatially correlated Cs adn Cb with positive correlation
-ks=1/2*ks0;
-css=kb/(Y*ks);      %Steady state substrate
-total_allowedCs= css*(nx*ny);   % total amount of SOM in domain
+%% Generating spatially correlated Cs adn Cb with negative correlation
+% ks=1/2*ks0;
+% css=kb/(Y*ks);      %Steady state substrate
+% total_allowedCs= css*(nx*ny);   % total amount of SOM in domain
 
 sp2=spatialPattern([100,100],-3);
-sp3= 200.*spCb  + max(spCb(:))*100 +(sp2).*5e7; % high Cs
-sp3=sp3./sum(sp3(:)); 
+sp3= -0.5.*spCb +  1*max(spCb(:)) + sp2.*max(spCb(:)).*0.2;
 spCs=sp3./sum(sp3(:)).*total_allowedCs ;
 
-% save('ph_pos_cs_ks2.mat', 'spCs')
+% save('ph_neg_cs.mat', 'spCs')
 
 subplot(3,3,4)
 surf(spCs);  shading flat; view(0,90); colorbar; 
@@ -97,16 +108,19 @@ txt=text(max(spCb(:))/2,max(spCs(:))*0.9, sprintf('Corr(Cs,Cb)= %0.3f',corr2(spC
 txt.FontSize=10;txt.FontWeight='bold';
 set(gca,'FontSize',10);
 %% Generating spatially correlated Cs adn Cb with zero correlation
-ks=1/4 *ks0;
-css=kb/(Y*ks);      %Steady state substrate
-total_allowedCs= css*(nx*ny);   % total amount of SOM in domain
+% ks=1/4 *ks0;
+% css=kb/(Y*ks);      %Steady state substrate
+% total_allowedCs= css*(nx*ny);   % total amount of SOM in domain
 
-sp2=spatialPattern([100,100],-3);
-sp3= 200.*spCb  + max(spCb(:))*100 +(sp2).*5e7; % high Cs
-sp3=sp3./sum(sp3(:)); 
+sp3=spatialPattern([100,100],-3);
+mu=total_allowedCs/nx/ny;
+sigma=20*mu;
+sp3 = sp3.*sigma + ones(nx,ny).*mu.*4;
+id2 =find(sp3<=0);
+sp3(id2)=0;
 spCs=sp3./sum(sp3(:)).*total_allowedCs ;
 
-% save('ph_pos_cs_ks3.mat', 'spCs')
+% save('ph_zero_cs.mat', 'spCs')
 
 subplot(3,3,7)
 surf(spCs);  shading flat; view(0,90); colorbar; 
@@ -126,11 +140,9 @@ set(gca,'FontSize',10);
 r1=-10.1 + (-8.56 - -10.1)*rand(10000,1);
 y1=10.^r1;
 ksm1=reshape(y1, [100,100]);
-mean(y1)
 % save('ksm1.mat', 'ksm1')
 r2=-9.4 + (-8.9 --9.4)*rand(10000,1);
 y2=10.^r2;
-mean(y2)
 ksm2=reshape(y2, [100,100]);
 % save('ksm2.mat', 'ksm2')
 
