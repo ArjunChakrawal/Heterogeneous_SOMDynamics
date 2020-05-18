@@ -38,3 +38,20 @@ Some third party scripts (from MATLAB Central File Exchange) are used in delevop
 * [export_fig](https://se.mathworks.com/matlabcentral/fileexchange/23629-export_fig), by Yair Altman 2018
 * [tight_subplot](https://se.mathworks.com/matlabcentral/fileexchange/27991-tight_subplot-nh-nw-gap-marg_h-marg_w), by  Pekka Kumpulainen 2016.
 * [ds2nfu](https://se.mathworks.com/matlabcentral/fileexchange/10656-data-space-to-figure-units-conversion), by Michelle Hirsch 2015.
+
+## Citation
+Please use the following citation [GMD](https://www.geosci-model-dev.net/13/1399/2020/gmd-13-1399-2020.html).
+```
+@Article{gmd-13-1399-2020,
+AUTHOR = {Chakrawal, A. and Herrmann, A. M. and Koestel, J. and Jarsj\"o, J. and Nunan, N. and K\"atterer, T. and Manzoni, S.},
+TITLE = {Dynamic upscaling of decomposition kinetics for carbon cycling models},
+JOURNAL = {Geoscientific Model Development},
+VOLUME = {13},
+YEAR = {2020},
+NUMBER = {3},
+PAGES = {1399--1429},
+URL = {https://www.geosci-model-dev.net/13/1399/2020/},
+DOI = {10.5194/gmd-13-1399-2020}
+}
+}
+```
